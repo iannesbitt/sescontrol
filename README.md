@@ -29,7 +29,7 @@ uninterrupted screen usage in KDE.
 
 Run both of these commands like a normal shell script:
 
-```
+```bash
 bash ./ses-off
 ```
 
@@ -40,7 +40,7 @@ Resulting settings:
 
 ## Turning SES on
 
-```
+```bash
 bash ./ses-on
 ```
 
@@ -62,7 +62,9 @@ Fields found in `Menu > Preferences > Global Settings > Pre-launch/Post exit scr
 VLC contains no pre-launch or post-exit setting fields, but users can start VLC
 using other means. For example, redefining the vlc command in `.bash_aliases`:
 
-`echo "alias vlc='ses-off; vlc; ses-on'" >> ~/.bash_aliases`
+```bash
+echo "alias vlc='ses-off; vlc; ses-on'" >> ~/.bash_aliases
+```
 
 This will change the function of the `vlc` command to be wrapped in sescontrol
 commands, so the screens should not power off as long as that process exists.
