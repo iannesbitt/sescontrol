@@ -1,0 +1,17 @@
+#!/bin/bash
+
+## A command to change the state of the Screen Energy Saving setting
+## in KDE plasma.
+## If found, this command will comment out the following lines:
+##
+## [AC][DPMSControl]
+## idleTime=600
+##
+## The effect will be to turn off the Screen Energy Saving setting in
+## System Settings > Hardware > Power Management > On AC Power.
+## This is sometimes necessary to ensure the continuous function of
+## multimedia and gaming applications.
+## Note that the idleTime flag must be followed by a blank line.
+## The value of idleTime does not matter.
+
+sed "/^\s*\[AC\]\[DPMSControl\].*;$/ s|^|#|; /^\s*\[AC\]\[DPMSControl\]/, /$/ s|^|#|" -i .config/powermanagementprofilesrc
