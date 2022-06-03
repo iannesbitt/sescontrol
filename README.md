@@ -52,7 +52,7 @@ Resulting settings:
 # Pre-launch and post-exit configuration
 ## Lutris
 
-Fields found in `Menu > Preferences > Global Settings > Pre-launch/Post exit script`
+Fields found in `Menu > Preferences > Global options > Pre-launch/Post exit script`
 
 ![Lutris pre-launch and post-exit configuration](imgs/lutris-config.png)
 
